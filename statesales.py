@@ -1,5 +1,6 @@
 ### colorize_svg.py
- 
+# Code adapted from:
+# http://flowingdata.com/2009/11/12/how-to-make-a-us-county-thematic-map-using-free-tools/
 import csv
 from BeautifulSoup import BeautifulSoup
  
