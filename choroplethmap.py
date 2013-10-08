@@ -74,7 +74,7 @@ def readCSVtoDict(filename):
     return dataDict
 
 
-iFile = os.path.dirname(__file__) + '\\data\\slm2013salesbystate.csv'
+iFile = os.path.dirname(__file__) + '\\data\\salesbystate.csv'
 stateSales = readCSVtoDict(iFile)
 
 cDict = OrderedDict([('#B1FFC3B', 0), ('#87EA9D', 10000), ('#00AD3B', 50000),
