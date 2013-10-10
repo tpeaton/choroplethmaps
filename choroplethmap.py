@@ -29,14 +29,15 @@ class ColorStateMap():
 
     def setStyleAttrib(self, cDict, p, value):
         styleAttrib = 'font-size:12px;fill-rule:nonzero;stroke:#000000;' \
-            'stroke-opacity:1;stroke-width:0.1;stroke-miterlimit:4;' \
+            'stroke-opacity:1;stroke-width:0.4;stroke-miterlimit:4;' \
             'stroke-dasharray:none;stroke-linecap:butt;marker-start:none;' \
-            'stroke-linejoin:bevel;fill:'
+            'stroke-linejoin:bevel'
 
         try:
             for c, t in cDict.iteritems():
                 if value > t:
-                    p['style'] = styleAttrib + c
+                    p['style'] = styleAttrib + ';fill:' + c
+
             return p['style']
         except:
             pass
