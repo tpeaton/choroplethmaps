@@ -32,11 +32,14 @@ class ColorStateMap():
             'stroke-opacity:1;stroke-width:0.1;stroke-miterlimit:4;' \
             'stroke-dasharray:none;stroke-linecap:butt;marker-start:none;' \
             'stroke-linejoin:bevel;fill:'
-        
-        for c, t in cDict.iteritems():
-            if value > t:
-                p['style'] = styleAttrib + c
-        return p['style']
+
+        try:
+            for c, t in cDict.iteritems():
+                if value > t:
+                    p['style'] = styleAttrib + c
+            return p['style']
+        except:
+            pass
 
 
     def colorizeMap(self, map, colorDict, data):
@@ -74,7 +77,7 @@ def readCSVtoDict(filename):
     return dataDict
 
 
-iFile = os.path.dirname(__file__) + '\\data\\slm2013salesbystate.csv'
+iFile = os.path.dirname(__file__) + '\\data\\alvarez2013.csv'
 stateSales = readCSVtoDict(iFile)
 
 cDict = OrderedDict([('#B1FFC3B', 0), ('#87EA9D', 10000), ('#00AD3B', 50000),
