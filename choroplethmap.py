@@ -28,7 +28,7 @@ class ColorStateMap():
 
 
     def setStyleAttrib(self, cDict, p, value):
-        styleAttrib = 'font-size:12px;fill-rule:nonzero;stroke:#FFFFFF;' \
+        styleAttrib = 'font-size:12px;fill-rule:nonzero;stroke:#000000;' \
             'stroke-opacity:1;stroke-width:0.1;stroke-miterlimit:4;' \
             'stroke-dasharray:none;stroke-linecap:butt;marker-start:none;' \
             'stroke-linejoin:bevel;fill:'
@@ -78,11 +78,11 @@ def readCSVtoDict(filename):
 
 
 
-iFile = os.path.dirname(__file__) + '\\data\\sales.csv'
+iFile = os.path.dirname(__file__) + '\\data\\sales2013.csv'
 
 stateSales = readCSVtoDict(iFile)
 
-cDict = OrderedDict([('#B1FFC3B', 0), ('#87EA9D', 10000), ('#00AD3B', 50000),
+cDict = OrderedDict([('#DCFAE2', 0), ('#87EA9D', 10000), ('#00AD3B', 50000),
          ('#007829', 100000), ('#004216', 200000), ('#001708', 500000)])
 
 NewMap = ColorStateMap(cDict, stateSales, 'coloredmap.svg')
