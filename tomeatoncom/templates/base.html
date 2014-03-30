@@ -9,10 +9,13 @@
     </head>
     <body>
         <div class="container">
+            <div class="row" style="margin-top:10px">
+                <h3>Tom Eaton</h3>
+            </div>
             <div class="row" style="margin-top:20px">
                 <ul class="nav nav-pills">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Maps</a></li>
+                    <li id="nav-home"><a href="{% url 'home' %}">Home</a></li>
+                    <li id="nav-maps"><a href="{% url 'maps' %}">Maps</a></li>
                 </ul>
                 <hr>
             </div>

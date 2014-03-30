@@ -3,5 +3,13 @@
 {% block title %}Map{% endblock title %}
 
 {% block content %}
-<p>maps</p>
+<object data="{{ STATIC_URL }}svg/coloredmap.svg" type="image/svg+xml"></object>
+{% endblock %}
+
+{% block extra_script %}
+<script>
+$(document).ready(function() {
+    $('#nav-maps').addClass('active');
+  });
+</script>
 {% endblock %}
