@@ -26,6 +26,12 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_DIR = os.path.join(os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.realpath(__file__)))))
+
+TEMPLATE_DIRS = (
+    os.path.join(SITE_DIR, 'tomeatoncom/templates'),
+)
 
 # Application definition
 
@@ -82,3 +88,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
